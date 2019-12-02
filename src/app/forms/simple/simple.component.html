@@ -1,0 +1,27 @@
+<p>simple works!</p>
+<div>
+    <form >
+        <label>
+            Name:
+            <input type="text" [formControl]="name">
+          </label>
+          <label>
+            phone:
+            <input type="text" [formControl]="phone">
+          </label>
+          <table border="2">
+              <tr>
+                  <td>name</td>
+                  <td>phone</td>
+              </tr>
+              <tr *ngFor='let n of this.myArray'>
+                <td>{{ n.name }}</td>
+                <td>{{ n.phone }}</td>
+            </tr>
+          </table>
+          
+          <p>
+            <button (click)="addName()">Update Name</button>
+          </p>
+    </form>
+</div>
